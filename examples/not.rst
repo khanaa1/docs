@@ -204,7 +204,7 @@ ask for 5000 samples.
 
 >>> Q = {('x', 'x'): -1, ('x', 'z'): 2, ('z', 'x'): 0, ('z', 'z'): -1}
 >>> response = sampler.sample_qubo(Q, num_reads=5000)
->>> for sample, energy, num_occurrences in response.data():   # doctest: +SKIP
+>>> for sample, energy, num_occurrences in response.data(['sample','energy','num_occurences']):   # doctest: +SKIP
 ...    print(sample, "Energy: ", energy, "Occurrences: ", num_occurrences)
 ...
 {'x': 0, 'z': 1} Energy:  -1.0 Occurrences:  2062
